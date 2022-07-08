@@ -27,9 +27,15 @@
     $lineData = explode(",", $line);
     $scores[$lineData[0]] = $lineData[1];
   }
+  asort($scores);
+  $lbName = array();
+  $lbScore = array();
+  foreach($scores as $x => $x_value) {
+    array_push($lbName,$x);
+    array_push($lbScore,$x_value);
+  }
+?>
 
-  print_r($scores);
-  ?>
 
 
   </pre>
@@ -42,54 +48,54 @@
     </tr>
     <tr>
       <td>1</td>
-      <td>Name 1</td>
-      <td>Score 1</td>
+      <td><?php echo $lbName[0]; ?></td>
+      <td><?php echo $lbScore[0]; ?></td>
     </tr>
 
     <tr>
       <td>2</td>
-      <td>Name 2</td>
-      <td>Score 2</td>
+      <td><?php echo $lbName[1]; ?></td>
+      <td><?php echo $lbScore[1]; ?></td>
     </tr>
     <tr>
       <td>3</td>
-      <td>Name 3</td>
-      <td>Score 3</td>
+      <td><?php echo $lbName[2]; ?></td>
+      <td><?php echo $lbScore[2]; ?></td>
     </tr>
     <tr>
       <td>4</td>
-      <td>Name 4</td>
-      <td>Score 4</td>
+      <td><?php echo $lbName[3]; ?></td>
+      <td><?php echo $lbScore[3]; ?></td>
     </tr>
     <tr>
       <td>5</td>
-      <td>Name 5</td>
-      <td>Score 5</td>
+      <td><?php echo $lbName[4]; ?></td>
+      <td><?php echo $lbScore[4]; ?></td>
     </tr>
     <tr>
       <td>6</td>
-      <td>Name 6</td>
-      <td>Score 6</td>
+      <td><?php echo $lbName[5]; ?></td>
+      <td><?php echo $lbScore[5]; ?></td>
     </tr>
     <tr>
       <td>7</td>
-      <td>Name 7</td>
-      <td>Score 7</td>
+      <td><?php echo $lbName[6]; ?></td>
+      <td><?php echo $lbScore[6]; ?></td>
     </tr>
     <tr>
       <td>8</td>
-      <td>Name 8</td>
-      <td>Score 8</td>
+      <td><?php echo $lbName[7]; ?></td>
+      <td><?php echo $lbScore[7]; ?></td>
     </tr>
     <tr>
       <td>9</td>
-      <td>Name 9</td>
-      <td>Score 9</td>
+      <td><?php echo $lbName[8]; ?></td>
+      <td><?php echo $lbScore[8]; ?></td>
     </tr>
     <tr>
       <td>10</td>
-      <td>Name 10</td>
-      <td>Score 10</td>
+      <td><?php echo $lbName[9]; ?></td>
+      <td><?php echo $lbScore[9]; ?></td>
     </tr>
   </table>
 
