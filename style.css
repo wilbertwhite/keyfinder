@@ -1,0 +1,25 @@
+body {
+    background: url(https://img.freepik.com/free-vector/suburban-cottage-residential-house-with-garage_107791-1034.jpg?w=2000) no-repeat center center fixed;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.main-menu {
+    margin: auto;
+    margin-top: 150px;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.791);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+div {
+    padding: 5px;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+
+}
