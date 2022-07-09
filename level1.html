@@ -5,35 +5,34 @@
 <link rel="stylesheet" href="prj_1stysheet.css">
 </head>
 <body>
-<div class=parent>
-	<div class=child1>
-		<img src="firstlevel.png">
 
-	</div>
-</div>
-<div>
-	<h1 class=leftsidepadding>Riddle:</h1>
-		<?php
-		$num = rand(1, 3);
-		if($num == 1)
-		{
-			$text = "riddle 1";
-            print $text;
-        }    
-		elseif($num == 2)
-		{
-			$text = "riddle 2";
-            print $text;
-		}
-		else
-		{
-			$text = "riddle 3";
-            print $text;
-		}
+    <div class=container>
+        <img src="firstlevel.png">
+        <button type="button" class=btn1 onclick="alert('Hello world!')">Click Me!</button>
+        <button type="button" class=btn2 onclick="alert('Hello world!')">Click Me!</button>
+        <button type="button" class=btn3 onclick="alert('Hello world!')">Click Me!</button>
+    </div>
+    <div>
+        <h1 class=leftsidepadding>Riddle:</h1>
+        <?php
+        $num = rand(1, 3);
+        if($num == 1)
+        {
+        $text = "riddle 1";
+        print $text;
+        }
+        elseif($num == 2)
+        {
+        $text = "riddle 2";
+        print $text;
+        }
+        else
+        {
+        $text = "riddle 3";
+        print $text;
+        }
         ?>
-</div>
-<button type="button" class=float10 onclick="alert('Hello world!')">Click Me!</button>
-<button type="button" class=float11 onclick="alert('Hello world!')">Click Me!</button>
-<button type="button" class=float12 onclick="alert('Hello world!')">Click Me!</button>
+    </div>
+    <button type="button" class=HomeButton onclick="alert('Home')">Home</button>
 </body>
 </html>
