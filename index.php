@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+if (!isset($_SESSION["player_name"])) {
+    $_SESSION["player_name"] = $_POST["player_name"];
+}
 ?>
 
 <!DOCTYPE html>
@@ -11,9 +15,6 @@ session_start();
 </head>
 
 <body>
-    <?php
-    $_SESSION["player_name"] = $_POST["player_name"];
-    ?>
     <div class="main-menu">
         <div>Logged in as: <?php echo $_SESSION["player_name"] ?></div>
         <h1>KeyFinder</h1>
@@ -21,13 +22,13 @@ session_start();
         <div>
             <div>Select a difficulty:</div>
             <div>
-                <a href="#" style="text-decoration: none;">
+                <a href="level1.php" style="text-decoration: none;">
                     <button>Easy</button>
                 </a>
-                <a href="#" style="text-decoration: none;">
+                <a href="level2.php" style="text-decoration: none;">
                     <button>Medium</button>
                 </a>
-                <a href="#" style="text-decoration: none;">
+                <a href="level3.php" style="text-decoration: none;">
                     <button>Hard</button>
                 </a>
             </div>
