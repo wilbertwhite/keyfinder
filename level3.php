@@ -200,15 +200,6 @@ if (!isset($_SESSION['time_start'])) {
 
 		echo "<br><h5 class=leftsidepadding>Number of unsuccesful attempts: " . $_SESSION['counter'] . "</h5>";
 
-		if (!isset($_SESSION['time_end'])) {
-			$_SESSION['time_end'] = 0;
-		} else {
-			$_SESSION['time'] = (int)($_SESSION['time_end'] - $_SESSION['time_start']);
-			echo "<h3 class=leftsidepadding>Score: " . ($_SESSION['time'] * 100) . "</h3>";
-		}
-
-		echo "<br><h5 class=leftsidepadding>Number of unsuccesful attempts: " . $_SESSION['counter'] . "</h5>";
-
 		if ($_SESSION['ongoing'] == false) {
 			if (isset($_SESSION['time'])) {
 				$_SESSION['final_score'] = ($_SESSION['time'] + ($_SESSION['counter'] * 5)) * 100;
