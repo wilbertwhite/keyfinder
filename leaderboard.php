@@ -16,7 +16,7 @@ session_start();
     }
   </style>
   <link rel="stylesheet" href="styleLeaderboard.css">
-  <title>Leaderboard</title>
+  <title>Leaderboard Easy</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@ session_start();
     file_put_contents("easyscores.txt", "\n" . $_SESSION['player_name'] . "," . $_SESSION['final_score'], FILE_APPEND);
   }
 
-  $data = fopen("scores.txt", "r");
+  $data = fopen("easyscores.txt", "r");
   $scores = array();
 
   while (!feof($data)) {
@@ -43,7 +43,7 @@ session_start();
 
   <table>
     <tr>
-      <caption>High Scores</caption>
+      <caption>High Scores - Easy Level</caption>
       <th>Rank</th>
       <th>Name</th>
       <th>Score</th>

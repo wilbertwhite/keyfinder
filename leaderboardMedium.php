@@ -68,7 +68,7 @@ session_start();
 
   <div id="button" class="HomeButton">
     <table>
-      <td style="color: white"><a href="">Return Home</a> </td>
+      <td style="color: white"><a href="index.php">Return Home</a> </td>
     </table>
   </div>
 
