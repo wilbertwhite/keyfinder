@@ -50,7 +50,9 @@ if(!isset($_SESSION['time_start']))
 		{
 			$num = $_SESSION['num'];
 		}
-		if($_SESSION['num'] == 1)
+		if (!isset($_SESSION['text'])) 
+		{
+			if($_SESSION['num'] == 1)
 			{
 				$_SESSION['text'] = "I’m made of glass but I don’t have people drinking out of me<br>
 					I come in different shapes but I’m not a car<br>

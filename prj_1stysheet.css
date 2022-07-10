@@ -1,7 +1,5 @@
 div.firstlvl {
 	position: fixed;
-
-
 }
 .parent {
 height: 800px;
@@ -33,10 +31,10 @@ img .lvl2 {
     background-color: transparent;
     color: transparent;
     text-align: center;
-
+	z-index:2;
+	border: none;
 }
-
-    .container .btn2 {
+.container .btn2 {
         position: absolute;
         width: 4%;
         height: 24%;
@@ -46,8 +44,10 @@ img .lvl2 {
         -ms-transform: translate(-50%,-50%);
         background-color: transparent;
         color: transparent;
+		z-index:2;
+		border: none;
     }
-    .container .btn3 {
+.container .btn3 {
         position: absolute;
         width: 3%;
         height: 55%;
@@ -57,8 +57,10 @@ img .lvl2 {
         -ms-transform: translate(-50%,-50%);
         background-color: transparent;
         color: transparent;
+		z-index:2;
+		border: none;
     }
-    .container .btn4 {
+.container .btn4 {
         position: absolute;
         width: 3%;
         height: 12%;
@@ -68,8 +70,10 @@ img .lvl2 {
         -ms-transform: translate(-50%,-50%);
         background-color: transparent;
         color: transparent;
+		z-index:2;
+		border: none;
     }
-    .container .btn5 {
+.container .btn5 {
         position: absolute;
         width: 3%;
         height: 5%;
@@ -79,8 +83,10 @@ img .lvl2 {
         -ms-transform: translate(-50%,-50%);
         background-color: transparent;
         color: transparent;
+		z-index:2;
+		border: none;
     }
-    .container .btn6 {
+.container .btn6 {
         position: absolute;
         width: 5%;
         height: 10%;
@@ -90,8 +96,10 @@ img .lvl2 {
         -ms-transform: translate(-50%,-50%);
         background-color: transparent;
         color: transparent;
+		z-index:2;
+		border: none;
     }
-    .container .btn7 {
+.container .btn7 {
         position: absolute;
         width: 3%;
         height: 6%;
@@ -101,8 +109,10 @@ img .lvl2 {
         -ms-transform: translate(-50%,-50%);
         background-color: transparent;
         color: transparent;
+		z-index:2;
+		border: none;
     }
-    .container .btn8 {
+.container .btn8 {
         position: absolute;
         width: 5%;
         height: 5%;
@@ -112,8 +122,10 @@ img .lvl2 {
         -ms-transform: translate(-50%,-50%);
         background-color: transparent;
         color: transparent;
+		z-index:2;
+		border: none;
     }
-    .container .btn9 {
+.container .btn9 {
         position: absolute;
         width: 4%;
         height: 5%;
@@ -123,8 +135,10 @@ img .lvl2 {
         -ms-transform: translate(-50%,-50%);
         background-color: transparent;
         color: transparent;
+		z-index:2;
+		border: none;
     }
-    .container .btn10 {
+.container .btn10 {
         position: absolute;
         width: 2.5%;
         height: 3%;
@@ -134,8 +148,10 @@ img .lvl2 {
         -ms-transform: translate(-50%,-50%);
         background-color: transparent;
         color: transparent;
+		z-index:2;
+		border: none;			
     }
-    .container .btn11 {
+.container .btn11 {
         position: absolute;
         width: 11%;
         height: 11%;
@@ -145,8 +161,10 @@ img .lvl2 {
         -ms-transform: translate(-50%,-50%);
         background-color: transparent;
         color: transparent;
+		z-index:2;
+		border: none;		
     }
-    .container .btn12 {
+.container .btn12 {
         position: absolute;
         width: 6%;
         height: 4%;
@@ -156,6 +174,19 @@ img .lvl2 {
         -ms-transform: translate(-50%,-50%);
         background-color: blue;
         color: blue;
+		z-index:2;
+		border: none;
+    }
+.container .btn13 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: .01%;
+        left: .01%;
+        background-color: transparent;
+        color: transparent;
+		z-index:1;
+		border: none;
     }
 .leftsidepadding {
 padding-left: 200px;

@@ -16,7 +16,7 @@ session_start();
     }
   </style>
   <link rel="stylesheet" href="styleLeaderboard.css">
-  <title>Leaderboard Easy</title>
+  <title>Leaderboard Hard</title>
 </head>
 
 <body>

@@ -16,7 +16,7 @@ session_start();
     }
   </style>
   <link rel="stylesheet" href="styleLeaderboard.css">
-  <title>Leaderboard</title>
+  <title>Leaderboard Easy</title>
 </head>
 
 <body>
@@ -43,7 +43,7 @@ session_start();
 
   <table>
     <tr>
-      <caption>High Scores</caption>
+      <caption>High Scores - Easy Level</caption>
       <th>Rank</th>
       <th>Name</th>
       <th>Score</th>
