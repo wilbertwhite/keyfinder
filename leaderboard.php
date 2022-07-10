@@ -27,7 +27,7 @@ session_start();
     file_put_contents("easyscores.txt", "\n" . $_SESSION['player_name'] . "," . $_SESSION['final_score'], FILE_APPEND);
   }
 
-  $data = fopen("scores.txt", "r");
+  $data = fopen("easyscores.txt", "r");
   $scores = array();
 
   while (!feof($data)) {
@@ -68,7 +68,7 @@ session_start();
 
   <div id="button" class="HomeButton">
     <table>
-      <td style="color: white"><a href="">Return Home</a> </td>
+      <td style="color: white"><a href="index.php">Return Home</a> </td>
     </table>
   </div>
 

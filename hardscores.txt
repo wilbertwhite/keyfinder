@@ -1,0 +1,3 @@
+Hisui,2000
+Nanaya,3000
+Vermillion,5000

@@ -1,0 +1,3 @@
+Aoko,500
+Arcueid,600
+Michael,700

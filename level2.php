@@ -233,11 +233,11 @@ if(!isset($_SESSION['time_start']))
 			if (isset($_SESSION['time'])) {
 				$_SESSION['final_score'] = ($_SESSION['time'] + ($_SESSION['counter'] * 5)) * 100;
 				echo "<h3 class=leftsidepadding>Final Score: " . $_SESSION['final_score'] . "</h3>";
-				echo "<div class=leftsidepadding>See your score on the <a href='leaderboard.php'>Leaderboard</a>!</div>";
+				echo "<div class=leftsidepadding>See your score on the <a href='leaderboardMedium.php'>Leaderboard</a>!</div>";
 			}
 		}
         ?>
     </div>
-    <button type="button" class=HomeButton onclick="alert('Home')">Home</button>
+    <button type="button" class=HomeButton><a href="index.php">Home</a></button>
 </body>
 </html>
