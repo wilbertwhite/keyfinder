@@ -186,6 +186,7 @@ img .lvl2 {
         background-color: transparent;
         color: transparent;
 		z-index:1;
+		border: none;
     }
 .leftsidepadding {
 padding-left: 200px;
