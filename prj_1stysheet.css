@@ -9,17 +9,6 @@ background: #CCCCCC;
 display: flex;
 align-items: center;
 }
-.child1 {
-padding-left: 200px;
-}
-
-.child2 {
-padding-left: 300px;
-}
-.child3 {
-padding-left: 300px;
-}
-
 .container  {
     position: relative;
     width: 100%;
@@ -165,8 +154,8 @@ img .lvl2 {
         left: 78%;
         transform: translate(-50%,-50%);
         -ms-transform: translate(-50%,-50%);
-        background-color: transparent;
-        color: transparent;
+        background-color: blue;
+        color: blue;
     }
 .leftsidepadding {
 padding-left: 200px;
