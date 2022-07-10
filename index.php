@@ -4,6 +4,16 @@ session_start();
 if (!isset($_SESSION["player_name"])) {
     $_SESSION["player_name"] = $_POST["player_name"];
 }
+if (isset($_SESSION["counter"])) {
+    unset($_SESSION["counter"]);
+    unset($_SESSION["time_start"]);
+    unset($_SESSION["time_end"]);
+    unset($_SESSION["num"]);
+    unset($_SESSION["text"]);
+    unset($_SESSION["ongoing"]);
+    unset($_SESSION["time"]);
+    unset($_SESSION["final_score"]);
+}
 ?>
 
 <!DOCTYPE html>
