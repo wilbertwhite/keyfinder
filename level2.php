@@ -28,19 +28,27 @@ if (!isset($_SESSION['time_start'])) {
 			<!---Eletrical box bottom floor--->
 			<input class="btn6" type="submit" name="button6" value="Button6" />
 			<!---speaker in bookshelf top floor--->
-			<input class="btn7" type="submit" name="button7" value="Button7" />
-		</form>
-	</div>
-	<div>
-		<h1 class=leftsidepadding>Riddle:</h1>
-		<?php
-		if (!isset($_SESSION['num'])) {
+
+            <input class="btn7" type="submit" name="button7"
+                   value="Button7" />
+				   <!---Button for entire image--->
+            <input class="btn13" type="submit" name="button13"
+                   value="Button13" />
+        </form>
+    </div>
+    <div>
+        <h1 class=leftsidepadding>Riddle:</h1>
+        <?php
+		if(!isset($_SESSION['num']))
+		{ 
+
 			$_SESSION['num'] = rand(1, 4);
 		} else {
 			$num = $_SESSION['num'];
 		}
-		if (!isset($_SESSION['text'])) {
-			if ($_SESSION['num'] == 1) {
+
+		if($_SESSION['num'] == 1)
+			{
 				$_SESSION['text'] = "I’m made of glass but I don’t have people drinking out of me<br>
 					I come in different shapes but I’m not a car<br>
 					I have water put in me but I’m not a bath<br>
@@ -67,7 +75,8 @@ if (!isset($_SESSION['time_start'])) {
 			}
 		} else {
 			$text = $_SESSION['text'];
-			echo "<h1 class=leftsidepadding>" . $text . "</h1>";
+
+			echo "<h3 class=leftsidepadding>".$text ."</h3>" ;
 		}
 
 		if ($_SESSION['num'] == 1) {
@@ -80,8 +89,16 @@ if (!isset($_SESSION['time_start'])) {
 			} else if (array_key_exists('button7', $_POST)) {
 				button2();
 			}
-		} else if ($_SESSION['num'] == 2) {
-			if (array_key_exists('button4', $_POST)) {
+
+			else if(array_key_exists('button13', $_POST))
+			{
+				button2();
+			}
+		}
+		else if($_SESSION['num'] == 2)
+		{
+			if(array_key_exists('button4', $_POST)) 
+			{
 				button2();
 			} else if (array_key_exists('button5', $_POST)) {
 				button3();
@@ -90,8 +107,16 @@ if (!isset($_SESSION['time_start'])) {
 			} else if (array_key_exists('button7', $_POST)) {
 				button2();
 			}
-		} else if ($_SESSION['num'] == 3) {
-			if (array_key_exists('button4', $_POST)) {
+
+			else if(array_key_exists('button13', $_POST))
+			{
+				button2();
+			}
+		}
+		else if($_SESSION['num'] == 3)
+		{
+			if(array_key_exists('button4', $_POST)) 
+			{
 				button2();
 			} else if (array_key_exists('button5', $_POST)) {
 				button2();
@@ -100,8 +125,15 @@ if (!isset($_SESSION['time_start'])) {
 			} else if (array_key_exists('button7', $_POST)) {
 				button2();
 			}
-		} else if ($_SESSION['num'] == 4) {
-			if (array_key_exists('button4', $_POST)) {
+			else if(array_key_exists('button13', $_POST))
+			{
+				button2();
+			}
+		}
+		else if($_SESSION['num'] == 4)
+		{
+			if(array_key_exists('button4', $_POST)) 
+			{
 				button2();
 			} else if (array_key_exists('button5', $_POST)) {
 				button2();
@@ -110,11 +142,16 @@ if (!isset($_SESSION['time_start'])) {
 			} else if (array_key_exists('button7', $_POST)) {
 				button5();
 			}
+			else if(array_key_exists('button13', $_POST))
+			{
+				button2();
+			}
 		}
 
 		function button1()
 		{
 			echo "<h3 class=leftsidepadding>You found it!</h3>";
+			$_SESSION['time_end'] = microtime(true);
 		}
 		function button2()
 		{
@@ -122,17 +159,18 @@ if (!isset($_SESSION['time_start'])) {
 			++$_SESSION['counter'];
 			$_SESSION['time_end'] = microtime(true);
 		}
-		function button3()
-		{
-			echo "<h3 class=leftsidepadding>So SMART!</h3>";
-		}
-		function button4()
-		{
+		function button3() {
+			echo "<h3 class=leftsidepadding>So SMART!</h3>";	
+			$_SESSION['time_end'] = microtime(true);
+		}	
+		function button4() {
 			echo "<h3 class=leftsidepadding>You did it!</h3>";
+			$_SESSION['time_end'] = microtime(true);
 		}
 		function button5()
 		{
 			echo "<h3 class=leftsidepadding>Such talent!</h3>";
+			$_SESSION['time_end'] = microtime(true);
 		}
 
 		if (!isset($_SESSION['time_end'])) {

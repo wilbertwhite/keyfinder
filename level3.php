@@ -30,7 +30,12 @@ if (!isset($_SESSION['time_start'])) {
 			<!---Washing machine on bottom floor--->
 			<input class="btn11" type="submit" name="button11" value="Button11" />
 			<!---Laundry basket on bottom floor--->
-			<input class="btn12" type="submit" name="button12" value="Button12" />
+      
+			<input class="btn12" type="submit" name="button12"
+				   value="Button12" />
+				   <!---Button for entire image--->
+            <input class="btn13" type="submit" name="button13"
+                   value="Button13" />
 		</form>
 	</div>
 	<div>
@@ -75,7 +80,8 @@ if (!isset($_SESSION['time_start'])) {
 			}
 		} else {
 			$text = $_SESSION['text'];
-			echo "<h1 class=leftsidepadding>" . $text . "</h1>";
+
+			echo "<h3 class=leftsidepadding>".$text ."</h3>" ;
 		}
 
 		if ($_SESSION['num'] == 1) {
@@ -92,6 +98,15 @@ if (!isset($_SESSION['time_start'])) {
 			}
 		} else if ($_SESSION['num'] == 2) {
 			if (array_key_exists('button8', $_POST)) {
+			else if(array_key_exists('button13', $_POST))
+			{
+				button2();
+			}
+		}
+		else if($_SESSION['num'] == 2)
+		{
+			if(array_key_exists('button8', $_POST)) 
+			{
 				button2();
 			} else if (array_key_exists('button9', $_POST)) {
 				button3();
@@ -102,8 +117,15 @@ if (!isset($_SESSION['time_start'])) {
 			} else if (array_key_exists('button12', $_POST)) {
 				button2();
 			}
-		} else if ($_SESSION['num'] == 3) {
-			if (array_key_exists('button8', $_POST)) {
+			else if(array_key_exists('button13', $_POST))
+			{
+				button2();
+			}
+		}
+		else if($_SESSION['num'] == 3)
+		{
+			if(array_key_exists('button8', $_POST)) 
+			{
 				button2();
 			} else if (array_key_exists('button9', $_POST)) {
 				button2();
@@ -114,8 +136,15 @@ if (!isset($_SESSION['time_start'])) {
 			} else if (array_key_exists('button12', $_POST)) {
 				button2();
 			}
-		} else if ($_SESSION['num'] == 4) {
-			if (array_key_exists('button8', $_POST)) {
+			else if(array_key_exists('button13', $_POST))
+			{
+				button2();
+			}
+		}
+		else if($_SESSION['num'] == 4)
+		{
+			if(array_key_exists('button8', $_POST)) 
+			{
 				button2();
 			} else if (array_key_exists('button9', $_POST)) {
 				button2();
@@ -126,8 +155,15 @@ if (!isset($_SESSION['time_start'])) {
 			} else if (array_key_exists('button12', $_POST)) {
 				button2();
 			}
-		} else {
-			if (array_key_exists('button8', $_POST)) {
+			else if(array_key_exists('button13', $_POST))
+			{
+				button2();
+			}
+		}
+		else
+		{
+			if(array_key_exists('button8', $_POST)) 
+			{
 				button2();
 			} else if (array_key_exists('button9', $_POST)) {
 				button2();
@@ -137,6 +173,10 @@ if (!isset($_SESSION['time_start'])) {
 				button2();
 			} else if (array_key_exists('button12', $_POST)) {
 				button6();
+			}
+			else if(array_key_exists('button13', $_POST))
+			{
+				button2();
 			}
 		}
 

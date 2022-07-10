@@ -19,23 +19,29 @@ if (!isset($_SESSION['time_start'])) {
 </head>
 
 <body>
-
 	<div class=container>
 		<img src="firstlevel.png">
 		<form method="post">
 			<input type="hidden" name="counter" value="<?php echo $_SESSION['counter']; ?>" />
+
 			<!---Fruits on table--->
 			<input class="btn1" type="submit" name="button1" value="Button1" />
 			<!---Mirror on wall--->
 			<input class="btn2" type="submit" name="button2" value="Button2" />
 			<!---Curtain on the far right--->
-			<input class="btn3" type="submit" name="button3" value="Button3" />
-		</form>
-	</div>
-	<div>
-		<h1 class=leftsidepadding>Riddle:</h1>
-		<?php
-		if (!isset($_SESSION['num'])) {
+
+            <input class="btn3" type="submit" name="button3"
+                   value="Button3" />
+			<!---Button for entire image--->
+            <input class="btn13" type="submit" name="button13"
+                   value="Button13" />				   
+        </form>
+    </div>
+    <div>
+        <h1 class=leftsidepadding>Riddle:</h1>
+        <?php
+		if(!isset($_SESSION['num']))
+		{ 
 			$_SESSION['num'] = rand(1, 3);
 		} else {
 			$num = $_SESSION['num'];
@@ -64,35 +70,57 @@ if (!isset($_SESSION['time_start'])) {
 			echo "<h3 class=leftsidepadding>" . $text . "</h3>";
 		}
 
-		if ($_SESSION['num'] == 1) {
-			if (array_key_exists('button1', $_POST)) {
+		
+		if($_SESSION['num'] == 1)
+		{
+			if(array_key_exists('button1', $_POST)) 
+			{
 				button1();
 			} else if (array_key_exists('button2', $_POST)) {
 				button2();
 			} else if (array_key_exists('button3', $_POST)) {
 				button2();
 			}
-		} else if ($_SESSION['num'] == 2) {
-			if (array_key_exists('button1', $_POST)) {
+			else if(array_key_exists('button13', $_POST))
+			{
+				button2();
+			}
+		}
+		else if($_SESSION['num'] == 2)
+		{
+			if(array_key_exists('button1', $_POST)) 
+			{
 				button2();
 			} else if (array_key_exists('button2', $_POST)) {
 				button3();
 			} else if (array_key_exists('button3', $_POST)) {
 				button2();
 			}
-		} else if ($_SESSION['num'] == 3) {
-			if (array_key_exists('button1', $_POST)) {
+			else if(array_key_exists('button13', $_POST))
+			{
+				button2();
+			}
+		}
+		else if($_SESSION['num'] == 3)
+		{
+			if(array_key_exists('button1', $_POST)) 
+			{
 				button2();
 			} else if (array_key_exists('button2', $_POST)) {
 				button2();
 			} else if (array_key_exists('button3', $_POST)) {
 				button4();
 			}
+			else if(array_key_exists('button13', $_POST))
+			{
+				button2();
+			}
 		}
 
 		function button1()
 		{
 			echo "<h3 class=leftsidepadding>You found it!</h3>";
+			$_SESSION['time_end'] = microtime(true);
 		}
 		function button2()
 		{
@@ -100,7 +128,17 @@ if (!isset($_SESSION['time_start'])) {
 			++$_SESSION['counter'];
 			$_SESSION['time_end'] = microtime(true);
 		}
-		function button3()
+
+		function button3() {
+			echo "<h3 class=leftsidepadding>So SMART!</h3>";	
+			$_SESSION['time_end'] = microtime(true);
+		}	
+		function button4() {
+			echo "<h3 class=leftsidepadding>You did it!</h3>";
+			$_SESSION['time_end'] = microtime(true);
+		}
+			
+		if(!isset($_SESSION['time_end']))
 		{
 			echo "<h3 class=leftsidepadding>So SMART!</h3>";
 		}
