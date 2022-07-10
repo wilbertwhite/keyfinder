@@ -172,8 +172,8 @@ img .lvl2 {
         left: 78%;
         transform: translate(-50%,-50%);
         -ms-transform: translate(-50%,-50%);
-        background-color: blue;
-        color: blue;
+        background-color: transparent;
+        color: transparent;
 		z-index:2;
 		border: none;
     }
