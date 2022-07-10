@@ -16,7 +16,7 @@ session_start();
     }
   </style>
   <link rel="stylesheet" href="styleLeaderboard.css">
-  <title>Leaderboard Easy</title>
+  <title>Leaderboard Hard</title>
 </head>
 
 <body>
@@ -43,7 +43,7 @@ session_start();
 
   <table>
     <tr>
-      <caption>High Scores - Easy Level</caption>
+      <caption>High Scores - Hard Level</caption>
       <th>Rank</th>
       <th>Name</th>
       <th>Score</th>
@@ -68,7 +68,7 @@ session_start();
 
   <div id="button" class="HomeButton">
     <table>
-      <td style="color: white"><a href="">Return Home</a> </td>
+      <td style="color: white"><a href="index.php">Return Home</a> </td>
     </table>
   </div>
 
