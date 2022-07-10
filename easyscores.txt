@@ -1,0 +1,3 @@
+Shiki,1000
+Akiha,2000
+Kohaku,500

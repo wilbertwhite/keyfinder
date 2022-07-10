@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -19,6 +22,11 @@
 <body>
   <pre>
   <?php
+  if (isset($_SESSION["final_score"])) {
+    //append playername and finalscore to easyscores.txt
+    file_put_contents("easyscores.txt", "\n" . $_SESSION['player_name'] . "," . $_SESSION['final_score'], FILE_APPEND);
+  }
+
   $data = fopen("scores.txt", "r");
   $scores = array();
 
