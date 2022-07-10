@@ -32,6 +32,9 @@ if(!isset($_SESSION['time_start']))
 			<!---speaker in bookshelf top floor--->
             <input class="btn7" type="submit" name="button7"
                    value="Button7" />
+				   <!---Button for entire image--->
+            <input class="btn13" type="submit" name="button13"
+                   value="Button13" />
         </form>
     </div>
     <div>
@@ -45,9 +48,7 @@ if(!isset($_SESSION['time_start']))
 		{
 			$num = $_SESSION['num'];
 		}
-		if(!isset($_SESSION['text']))
-		{
-			if($_SESSION['num'] == 1)
+		if($_SESSION['num'] == 1)
 			{
 				$_SESSION['text'] = "I’m made of glass but I don’t have people drinking out of me<br>
 					I come in different shapes but I’m not a car<br>
@@ -83,7 +84,7 @@ if(!isset($_SESSION['time_start']))
 		else
 		{
 			$text = $_SESSION['text'];
-			echo "<h1 class=leftsidepadding>".$text ."</h1>" ;
+			echo "<h3 class=leftsidepadding>".$text ."</h3>" ;
 		}
 		
 		if($_SESSION['num'] == 1)
@@ -101,6 +102,10 @@ if(!isset($_SESSION['time_start']))
 				button2();
 			}
 			else if(array_key_exists('button7', $_POST))
+			{
+				button2();
+			}
+			else if(array_key_exists('button13', $_POST))
 			{
 				button2();
 			}
@@ -123,6 +128,10 @@ if(!isset($_SESSION['time_start']))
 			{
 				button2();
 			}
+			else if(array_key_exists('button13', $_POST))
+			{
+				button2();
+			}
 		}
 		else if($_SESSION['num'] == 3)
 		{
@@ -139,6 +148,10 @@ if(!isset($_SESSION['time_start']))
 				button4();
 			}
 			else if(array_key_exists('button7', $_POST))
+			{
+				button2();
+			}
+			else if(array_key_exists('button13', $_POST))
 			{
 				button2();
 			}
@@ -161,10 +174,15 @@ if(!isset($_SESSION['time_start']))
 			{
 				button5();
 			}
+			else if(array_key_exists('button13', $_POST))
+			{
+				button2();
+			}
 		}
 		
 		function button1() {
 			echo "<h3 class=leftsidepadding>You found it!</h3>";
+			$_SESSION['time_end'] = microtime(true);
 		}
 		function button2() {
 			echo "<h3 class=leftsidepadding>Better luck next time!</h3>";
@@ -173,12 +191,15 @@ if(!isset($_SESSION['time_start']))
 		}
 		function button3() {
 			echo "<h3 class=leftsidepadding>So SMART!</h3>";	
+			$_SESSION['time_end'] = microtime(true);
 		}	
 		function button4() {
 			echo "<h3 class=leftsidepadding>You did it!</h3>";
+			$_SESSION['time_end'] = microtime(true);
 		}
 		function button5() {
 			echo "<h3 class=leftsidepadding>Such talent!</h3>";
+			$_SESSION['time_end'] = microtime(true);
 		}
 		
 		if(!isset($_SESSION['time_end']))

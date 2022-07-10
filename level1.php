@@ -17,9 +17,8 @@ if(!isset($_SESSION['time_start']))
 <link rel="stylesheet" href="prj_1stysheet.css">
 </head>
 <body>
-
     <div class=container>
-        <img src="firstlevel.png">
+        <img src="firstlevel.png" >
         <form method="post">
 		<input type="hidden" name="counter" value="<?php echo $_SESSION['counter']; ?>" />
 			<!---Fruits on table--->
@@ -30,7 +29,10 @@ if(!isset($_SESSION['time_start']))
                    value="Button2" />
 			<!---Curtain on the far right--->
             <input class="btn3" type="submit" name="button3"
-                   value="Button3" />	   
+                   value="Button3" />
+			<!---Button for entire image--->
+            <input class="btn13" type="submit" name="button13"
+                   value="Button13" />				   
         </form>
     </div>
     <div>
@@ -76,8 +78,8 @@ if(!isset($_SESSION['time_start']))
 			echo "<h3 class=leftsidepadding>".$text ."</h3>" ;
 		}
 		
-			if($_SESSION['num'] == 1)
-			{
+		if($_SESSION['num'] == 1)
+		{
 			if(array_key_exists('button1', $_POST)) 
 			{
 				button1();
@@ -87,6 +89,10 @@ if(!isset($_SESSION['time_start']))
 				button2();
 			}
 			else if(array_key_exists('button3', $_POST))
+			{
+				button2();
+			}
+			else if(array_key_exists('button13', $_POST))
 			{
 				button2();
 			}
@@ -106,6 +112,10 @@ if(!isset($_SESSION['time_start']))
 			{
 				button2();
 			}
+			else if(array_key_exists('button13', $_POST))
+			{
+				button2();
+			}
 		}
 		else if($_SESSION['num'] == 3)
 		{
@@ -121,10 +131,15 @@ if(!isset($_SESSION['time_start']))
 			{
 				button4();
 			}
+			else if(array_key_exists('button13', $_POST))
+			{
+				button2();
+			}
 		}
 		
 		function button1() {
 			echo "<h3 class=leftsidepadding>You found it!</h3>";
+			$_SESSION['time_end'] = microtime(true);
 		}
 		function button2() {
 			echo "<h3 class=leftsidepadding>Better luck next time!</h3>";
@@ -133,9 +148,11 @@ if(!isset($_SESSION['time_start']))
 		}
 		function button3() {
 			echo "<h3 class=leftsidepadding>So SMART!</h3>";	
+			$_SESSION['time_end'] = microtime(true);
 		}	
 		function button4() {
 			echo "<h3 class=leftsidepadding>You did it!</h3>";
+			$_SESSION['time_end'] = microtime(true);
 		}
 			
 		if(!isset($_SESSION['time_end']))
