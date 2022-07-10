@@ -40,6 +40,7 @@ if (!isset($_SESSION['time_start'])) {
     <div>
         <h1 class=leftsidepadding>Riddle:</h1>
         <?php
+		$_SESSION['ongoing'] = true;
 		if(!isset($_SESSION['num']))
 		{ 
 			$_SESSION['num'] = rand(1, 3);
@@ -75,6 +76,7 @@ if (!isset($_SESSION['time_start'])) {
 		{
 			if(array_key_exists('button1', $_POST)) 
 			{
+				$_SESSION['ongoing']= false;
 				button1();
 			} else if (array_key_exists('button2', $_POST)) {
 				button2();
@@ -91,7 +93,11 @@ if (!isset($_SESSION['time_start'])) {
 			if(array_key_exists('button1', $_POST)) 
 			{
 				button2();
-			} else if (array_key_exists('button2', $_POST)) {
+
+			}
+			else if(array_key_exists('button2', $_POST))
+			{
+				$_SESSION['ongoing']= false;
 				button3();
 			} else if (array_key_exists('button3', $_POST)) {
 				button2();
@@ -108,7 +114,10 @@ if (!isset($_SESSION['time_start'])) {
 				button2();
 			} else if (array_key_exists('button2', $_POST)) {
 				button2();
-			} else if (array_key_exists('button3', $_POST)) {
+			}
+			else if(array_key_exists('button3', $_POST))
+			{
+				$_SESSION['ongoing']= false;
 				button4();
 			}
 			else if(array_key_exists('button13', $_POST))
@@ -153,12 +162,16 @@ if (!isset($_SESSION['time_start'])) {
 			$_SESSION['time'] = (int)($_SESSION['time_end'] - $_SESSION['time_start']);
 			echo "<h3 class=leftsidepadding>Score: " . ($_SESSION['time'] * 100) . "</h3>";
 		}
-
-		echo "<br><h5 class=leftsidepadding>Number of unsuccesful attempts: " . $_SESSION['counter'] . "</h5>";
-
-		if (isset($_SESSION['time'])) {
-			$_SESSION['final_score'] = ($_SESSION['time'] + ($_SESSION['counter'] * 5)) * 100;
-			echo "<h3 class=leftsidepadding>Final Score: " . $_SESSION['final_score'] . "</h3>";
+		
+		echo "<br><h5 class=leftsidepadding>Number of unsuccesful attempts: ".$_SESSION['counter']."</h5>";
+		
+		if($_SESSION['ongoing'] == false)
+		{
+			if(isset($_SESSION['time']))
+			{
+				$_SESSION['final_score']= ($_SESSION['time']+($_SESSION['counter']*5))*100;
+				echo "<h3 class=leftsidepadding>Final Score: ".$_SESSION['final_score']. "</h3>";
+			}
 		}
 		?>
 	</div>
